@@ -1,4 +1,4 @@
-"""Generates the static figures referenced in README / INTERVIEW_PREP.md."""
+"""Generates the static figures referenced in the README."""
 import sqlite3
 from pathlib import Path
 

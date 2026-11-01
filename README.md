@@ -4,12 +4,12 @@
 
 > Built a 4-page dashboard (SQL-modeled data: revenue, profit, orders, product performance, customer metrics) · Star-schema data model in SQL + Python · RFM segmentation in SQL identifying Champions / Loyal / New / At-Risk customers · Power BI-ready with real DAX measures, geographic insights, and time-series trends.
 
-**Honest note up front:** this was built on a Mac with no Power BI Desktop available
-(it's Windows-only). The SQL star schema and RFM segmentation — the actual data
-engineering work — are built for real. The 4-page dashboard is delivered as a working
-Streamlit/Plotly app instead of a `.pbix`, and every DAX measure a real Power BI build
-would need is written out, correct, and ready to paste in `dax_measures.md`. Full
-explanation and how to talk about this in an interview: `INTERVIEW_PREP.md`.
+The data modeling (star schema in SQL, RFM segmentation) and the dashboard
+itself are both real and runnable. The 4-page dashboard ships as a
+Streamlit/Plotly app rather than a `.pbix` file, since Power BI Desktop is
+Windows-only — but every DAX measure the dashboard's logic maps to is
+written out and ready to use in `dax_measures.md` for a Power BI build on
+Windows.
 
 ---
 
@@ -40,8 +40,7 @@ Interactive_Ecommerce_Performance_Dashboard/
 │   ├── rfm.csv, geo.csv, revenue_trends.csv, kpi_summary.json, ...
 ├── dax_measures.md                  # Real DAX, ready for an actual Power BI build
 ├── requirements.txt
-├── README.md
-└── INTERVIEW_PREP.md                # Full interview-prep report — read before the interview
+└── README.md
 ```
 
 ---
@@ -72,7 +71,7 @@ streamlit run streamlit_app.py
 | Name | Superstore Sales Dataset |
 | Size | 9,994 order-line rows x 21 columns |
 | Coverage | Jan 2014 - Dec 2017, 793 customers, 1,862 products, 49 states |
-| Source | Public Kaggle dataset ("vivek468/superstore-dataset-final"), mirrored from a public GitHub copy the same way the churn project downloaded its Telco CSV |
+| Source | Public Kaggle dataset ("vivek468/superstore-dataset-final") |
 
 ## Star Schema
 
@@ -83,7 +82,10 @@ with zero orphan rows after load (`src/setup_database.py` prints this check).
 ## RFM Segmentation (SQL, `sql/02_rfm_segmentation.sql`)
 
 Recency/Frequency/Monetary quintile-scored per customer, classified by per-axis
-thresholds (not a single summed cutoff — see `INTERVIEW_PREP.md` for why):
+thresholds rather than a single summed score — a customer who is very recent
+but low-frequency and a customer who is frequent but hasn't ordered in months
+can land on the same summed total, even though they need very different
+retention strategies. Per-axis thresholds keep those cases distinguishable:
 
 | Segment | Customers | % of customers | Total monetary value | % of value |
 |---|---|---|---|---|
@@ -106,6 +108,3 @@ thresholds (not a single summed cutoff — see `INTERVIEW_PREP.md` for why):
 | Profit Margin | 12.47% |
 | Top 3 states by revenue | California (20.7%), New York (12.4%), Texas (7.6%) |
 | Loss-making sub-categories | Tables (-$17,725), Machines near-breakeven ($3,385 on $189K revenue) |
-
-Full write-up, every design decision justified, and the honest Power BI discussion:
-[`INTERVIEW_PREP.md`](INTERVIEW_PREP.md).

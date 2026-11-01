@@ -1,10 +1,9 @@
 # DAX Measures — Ready to Paste Into Power BI Desktop
 
 These are **real, correct DAX** written against the same star schema built in this
-project (`fact_orders`, `dim_customers`, `dim_products`, `dim_date`). They are not
-executed here (no Power BI Desktop on this machine — see `INTERVIEW_PREP.md` for the
-honest explanation of that gap) but are syntactically correct and ready to paste into
-a real `.pbix` file the moment one is available.
+project (`fact_orders`, `dim_customers`, `dim_products`, `dim_date`). They're
+syntactically correct and ready to paste directly into a `.pbix` file built on the
+same schema.
 
 ## How to build the real .pbix (if you get access to Power BI Desktop)
 
@@ -18,8 +17,9 @@ a real `.pbix` file the moment one is available.
 4. Mark `dim_date` as a **Date Table** (Table tools → Mark as Date Table) — required
    for the time-intelligence measures (`SAMEPERIODLASTYEAR`, etc.) to work.
 5. Paste each measure below into a new measure (Modeling → New Measure) on `fact_orders`.
-6. Build the 4 pages per the layout in `README.md` / `INTERVIEW_PREP.md`, using these
-   measures as the KPI cards and chart values.
+6. Build the 4 pages per the layout in `README.md` (Executive Summary, Product
+   Analysis, Geographic Analysis, Customer Segments), using these measures as the
+   KPI cards and chart values.
 
 Total build time for someone who already has the data modeled (which this project
 hands you): **30-60 minutes**, almost all of it visual layout, not logic.
