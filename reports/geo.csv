@@ -1,0 +1,48 @@
+state,region,revenue,profit,orders,pct_of_total_revenue,revenue_rank
+California,West,475524.52,52469.24,952,20.7,1
+New York,East,284482.32,43251.91,582,12.38,2
+Texas,Central,174550.8,15622.91,469,7.6,3
+Washington,West,161213.98,32171.86,321,7.02,4
+Ohio,East,112150.97,16914.65,229,4.88,5
+North Carolina,South,107393.57,-699.3,187,4.67,6
+Pennsylvania,East,106241.91,10213.32,282,4.62,7
+Illinois,Central,96333.51,9948.39,266,4.19,8
+Florida,South,65517.14,8045.26,176,2.85,9
+Michigan,Central,60975.03,5732.97,118,2.65,10
+Kentucky,South,56424.28,9732.16,89,2.46,11
+Massachusetts,East,55316.71,11073.1,104,2.41,12
+Virginia,South,45369.87,4808.58,102,1.98,13
+Tennessee,South,38092.2,3107.13,87,1.66,14
+Arizona,West,33432.81,2617.61,86,1.46,15
+Georgia,South,31890.05,4410.04,73,1.39,16
+Colorado,West,31727.0,2617.15,88,1.38,17
+Oklahoma,Central,31137.42,6314.96,60,1.36,18
+Alabama,South,28932.27,1380.24,47,1.26,19
+Connecticut,East,27204.1,4630.02,70,1.18,20
+Indiana,Central,22985.22,2909.15,64,1.0,21
+Nebraska,Central,20952.22,3536.45,42,0.91,22
+Minnesota,Central,19783.94,179.1,40,0.86,23
+Delaware,East,19541.88,5787.84,21,0.85,24
+Wisconsin,Central,19473.95,4860.02,48,0.85,25
+Mississippi,South,17259.62,3516.92,27,0.75,26
+South Carolina,South,16804.03,4239.93,28,0.73,27
+Iowa,Central,16253.44,1386.4,25,0.71,28
+New Jersey,East,14036.87,1739.11,59,0.61,29
+Missouri,Central,13184.41,2634.89,23,0.57,30
+Arkansas,South,13139.55,1568.37,25,0.57,31
+Rhode Island,East,9099.19,1870.07,17,0.4,32
+Louisiana,South,9003.88,2222.74,20,0.39,33
+Oregon,West,8538.52,514.78,23,0.37,34
+West Virginia,East,8322.83,-1695.97,7,0.36,35
+Vermont,East,7561.81,1595.83,15,0.33,36
+Maryland,East,6771.9,645.88,20,0.29,37
+North Dakota,Central,6113.26,237.5,14,0.27,38
+Kansas,Central,5176.43,829.25,12,0.23,39
+Idaho,West,4703.31,965.6,17,0.2,40
+New Mexico,West,4095.54,585.49,20,0.18,41
+South Dakota,Central,3173.87,591.72,6,0.14,42
+Utah,West,2571.12,160.74,13,0.11,43
+District of Columbia,East,2355.21,547.75,10,0.1,44
+New Hampshire,East,1157.07,288.37,14,0.05,45
+Montana,West,1010.26,244.2,6,0.04,46
+Nevada,West,221.08,72.68,5,0.01,47
